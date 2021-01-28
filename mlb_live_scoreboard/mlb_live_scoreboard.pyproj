@@ -11,6 +11,7 @@
     <OutputPath>.</OutputPath>
     <Name>mlb_live_scoreboard</Name>
     <RootNamespace>mlb_live_scoreboard</RootNamespace>
+    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,7 +22,44 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="LED\gpio_runner.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LED\tests\bcd.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LED\tests\gpio_thread.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LED\tests\__init__.py" />
+    <Compile Include="LED\values_matrix.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LED\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LED\score_board.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LED\pin_map.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="mlb_live_scoreboard.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="env\">
+      <Id>env</Id>
+      <Version>3.7</Version>
+      <Description>env (Python 3.7 (32-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X86</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="LED\" />
+    <Folder Include="LED\tests\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
