@@ -25,13 +25,15 @@
     <Compile Include="LED\gpio_runner.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="LED\tests\bcd.py">
+    <Compile Include="tests\bcd.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="LED\tests\gpio_thread.py">
+    <Compile Include="tests\gpio_thread.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="LED\tests\__init__.py" />
+    <Compile Include="tests\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="LED\values_matrix.py">
       <SubType>Code</SubType>
     </Compile>
@@ -59,7 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="LED\" />
-    <Folder Include="LED\tests\" />
+    <Folder Include="tests\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
