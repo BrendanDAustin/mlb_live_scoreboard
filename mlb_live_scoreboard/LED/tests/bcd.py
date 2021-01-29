@@ -89,6 +89,9 @@ def main():
     bcd_2()
     print('done with bcd test')
 
+if __name__=="__main__":
+    main()
+
 
     
 
