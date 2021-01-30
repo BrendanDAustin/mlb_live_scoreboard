@@ -1,0 +1,7 @@
+numpy==1.19.5
+pandas==1.2.1
+pip==19.0.3
+python-dateutil==2.8.1
+pytz==2020.5
+setuptools==40.8.0
+six==1.15.0
